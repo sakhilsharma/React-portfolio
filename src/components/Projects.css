@@ -1,0 +1,170 @@
+.projects-container {
+    padding: 40px 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.projects-container h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    /* Changed grid template to have fixed width columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* Decreased max width */
+    gap: 30px;
+    max-width: 1200px; /* Decreased max-width of container */
+    margin: 0 auto;
+    justify-content: center; /* Center the grid items */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%; /* Ensure card takes full width of grid item */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px; /* Slightly decreased height */
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    color: white;
+    font-size: 1.3rem; /* Slightly decreased */
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem; /* Slightly decreased */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* Decreased gap */
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 3px 10px; /* Decreased padding */
+    border-radius: 12px;
+    font-size: 0.85rem; /* Decreased font size */
+}
+
+.project-links {
+    display: flex;
+    gap: 12px; /* Decreased gap */
+}
+
+.github-link, .live-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px; /* Decreased padding */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem; /* Decreased font size */
+    transition: all 0.3s ease;
+}
+
+.github-link {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.live-link {
+    background: #4ade80;
+    color: #1a1a1a;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.live-link:hover {
+    background: #48ce79;
+}
+
+.github-link img {
+    width: 18px; /* Decreased size */
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+    .projects-container {
+        padding: 30px 40px;
+    }
+
+    .projects-container h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        padding: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); /* Even smaller on mobile */
+    }
+
+    .projects-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-image {
+        height: 160px; /* Smaller height on mobile */
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 350px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+} 

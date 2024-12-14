@@ -1,0 +1,149 @@
+.skills-container {
+    min-height: calc(100vh - 80px);
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.skills-container h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.skill-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skill-item span {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Custom colors for different categories */
+.frontend {
+    background: linear-gradient(145deg, rgba(49, 120, 246, 0.1), rgba(49, 120, 246, 0.05));
+}
+
+.backend {
+    background: linear-gradient(145deg, rgba(72, 149, 84, 0.1), rgba(72, 149, 84, 0.05));
+}
+
+.frameworks {
+    background: linear-gradient(145deg, rgba(159, 90, 253, 0.1), rgba(159, 90, 253, 0.05));
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+    .skills-container {
+        padding: 30px 40px;
+    }
+
+    .skill-card {
+        min-width: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        padding: 20px;
+    }
+
+    .skills-container h2 {
+        font-size: 2rem;
+    }
+
+    .skills-grid {
+        gap: 20px;
+    }
+
+    .skill-card {
+        min-width: 100%;
+    }
+
+    .skill-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .skills-content {
+        gap: 15px;
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-item span {
+        font-size: 0.9rem;
+    }
+}
+
+.skill-item img[alt="Express.js"] {
+    filter: brightness(0) invert(1);
+    width: 45px;
+    height: 45px;
+} 
