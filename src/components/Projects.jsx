@@ -20,7 +20,7 @@ export default function Projects() {
         {
             title: "Portfolio Webiste",
             description: "Explore my portfolio to see a range of projects that demonstrate my skills and approach to web development. Each project showcases my ability to solve complex problems.",
-    image: "/pic.png",
+    image: "image2.jpg",
         technologies: ["React","GSAP"],
             githubLink: "https://sakhil-sharma.netlify.app/",
                 liveLink: "https://sakhil-sharma.netlify.app/"

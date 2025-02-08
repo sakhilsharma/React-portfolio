@@ -1,0 +1,176 @@
+.experience-container {
+    min-height: 100vh;
+    padding: 40px 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+    height: auto;
+    min-height: 200px;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card h3 {
+    color: #4ade80;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.experience-card .company {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.experience-card .duration {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.experience-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.experience-card li {
+    color: white;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.experience-card li:before {
+    content: "•";
+    color: #4ade80;
+    position: absolute;
+    left: 0;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.experience-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .experience-container {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .experience-grid {
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 20px;
+        min-height: 180px;
+    }
+
+    .experience-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-card .company {
+        font-size: 1.1rem;
+    }
+} 
+.linkToLinkdIn a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #4ade80;
+    border-radius: 25px;
+    background-color: transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+    position: relative;
+    left: 20px;
+}
+
+.linkToLinkdIn a:hover {
+    background-color: #4ade80;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    background: transparent;
+    border: 2px solid #4ade80;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #4ade80;
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.theme-toggle:hover svg {
+    color: #000000;
+}

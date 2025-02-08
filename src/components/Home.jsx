@@ -110,6 +110,16 @@ export default function Home() {
                 <div className="content">
                     <h2>SAKHIL SHARMA</h2>
                     <p>I'm A <span className="animate"></span></p>
+                    <div className="resume-section">
+                        <a 
+                            href="Resume.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="resume-button"
+                        >
+                            <i className="fas fa-file-pdf"></i>  Resume
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
