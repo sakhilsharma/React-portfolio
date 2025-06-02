@@ -101,7 +101,7 @@ export default function Home() {
                                     <img src="image2.jpg" alt="profile" />
                                 </div>
                                 <div className="flip-card-back">
-                                    <img src="pic.png" alt="profile-back" />
+                                    <img src="newImage.jpg" alt="profile-back" />
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function Home() {
                     <p>I'm A <span className="animate"></span></p>
                     <div className="resume-section">
                         <a 
-                            href="Resume.pdf" 
+                            href="https://drive.google.com/file/d/14nXsjLPxy8TBhC1jn__342NvdK4ZGv9R/view?usp=sharing" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="resume-button"

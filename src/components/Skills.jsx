@@ -112,6 +112,43 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
+                {/* Languages */}
+<div className="skill-card languages">
+    <h3>Languages</h3>
+    <div className="skills-content">
+        <div className="skill-item">
+            <img
+                src="C++logo.png" // C++ icon (same style)
+                alt="C++ Language"
+               
+            />
+            <span>C/C++</span>
+        </div>
+    </div>
+    <div className="leetcode-link" style={{ marginTop: '1rem' }}>
+    <a
+        href="https://leetcode.com/u/sakhil_123/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+            backgroundColor: '#FFA116', // LeetCode orange
+            color: '#000',
+            padding: '10px 16px',
+            borderRadius: '8px',
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            display: 'inline-block',
+            transition: 'background-color 0.3s ease'
+        }}
+        onMouseOver={e => (e.currentTarget.style.backgroundColor = '#e59400')}
+        onMouseOut={e => (e.currentTarget.style.backgroundColor = '#FFA116')}
+    >
+        View LeetCode Profile
+    </a>
+</div>
+
+</div>
+
             </div>
 
             <div className="interview-section">
