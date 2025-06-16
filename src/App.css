@@ -1,0 +1,92 @@
+.next-nav-button {
+  transition: all 0.3s ease;
+}
+
+.next-nav-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Add smooth transitions between routes */
+.page-transition {
+  position: absolute;
+  width: 100%;
+}
+
+.page-transition-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 300ms ease;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 300ms ease;
+}
+
+.next-nav-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .next-nav-button {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
+  
+  .next-nav-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+/* Previous button specific styles */
+.prev-nav-button {
+  transition: all 0.3s ease;
+}
+
+.prev-nav-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Shared styles for both buttons */
+.prev-nav-button, .next-nav-button {
+  /* Add any shared styles here */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .prev-nav-button, .next-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .prev-nav-button {
+    left: 10px !important;
+  }
+  
+  .next-nav-button {
+    right: 10px !important;
+  }
+  
+  .prev-nav-button svg, .next-nav-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}

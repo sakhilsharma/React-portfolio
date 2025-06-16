@@ -13,7 +13,7 @@ const VantaRings = () => {
           el: vantaRef.current,
           THREE,
           color: 0x0077ff,
-          backgroundColor: 0x1a1a1a,
+          backgroundColor: 0x000000,
            backgroundAlpha: 1,
         })
       );

@@ -33,20 +33,22 @@ export function Example() {
   )
 }
 export default function About() {
-   
+
   const array = [
     { src: "SIH.jpg", alt: "Smart India Hackathon" },
     { src: "Electrothon7.0.jpg", alt: "Electrothon 7.0" },
     { src: "group.jpg", alt: "group" },
     { src: "newImage.jpg", alt: "group" }
-    
+
   ];
   return (
     <div className="about relative z-10">
-      <VantaHalo id="#vanta-bg"/>
+      <VantaHalo id="#vanta-bg" />
+
       <div className="text-section text-[15px] card">
-         
         <p>
+          <h2 class="text-center underline decoration-green-500">About Me</h2>
+
           My Name is Sakhil Sharma. Student at NIT Hamirpur, currently pursuing my
           <i><b> BTech</b></i> degree in Electronics and Communication Engineering.
           Ever since I've been fascinated by technology and its endless possibilities,
@@ -118,42 +120,42 @@ export default function About() {
 
       </div>
       <div className="info flex flex-col md:flex-row gap-8 items-center justify-center p-6">
-  {/* Video Section */}
-  <div className="media-card card max-w-md">
-    <video width="400" height="225" controls loop className="rounded-lg shadow-lg w-full h-auto">
-      <source src="vedio1.mp4" type="video/mp4" />
-    </video>
-  </div>
+        {/* Video Section */}
+        <div className="media-card card max-w-md">
+          <video width="400" height="225" controls loop className="rounded-lg shadow-lg w-full h-auto">
+            <source src="vedio1.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-  {/* Carousel Section */}
-  <div className="w-full max-w-[280px]">
-    <Carousel className="w-full"  plugins={[
-        Autoplay({
-          delay: 2000,
-        }),
-      ]}>
-      <CarouselContent>
-        {array.map((item, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-3">
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="w-full h-full object-cover rounded-lg shadow-md"
-                  />
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-  </div>
-</div>
+        {/* Carousel Section */}
+        <div className="w-full max-w-[280px]">
+          <Carousel className="w-full" plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}>
+            <CarouselContent>
+              {array.map((item, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-3">
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          className="w-full h-full object-cover rounded-lg shadow-md"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </div>
 
 
     </div>
