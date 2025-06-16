@@ -1,126 +1,158 @@
 import "./About.css";
 import { FaMedal, FaLightbulb, FaCode, FaUsers, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-const AchievementCard = ({ title, icon, date, highlights, points }) => (
-  <motion.div
-   className="
-    achievement-card
-    max-w-md
-    p-4
-    bg-gray-800
-    bg-opacity-90
-    rounded-lg
-    border-2
-    border-gray-600
-    shadow-lg
-    backdrop-blur-sm
-    text-white
-    transition
-    duration-200
-    hover:scale-105
-    hover:border-green-400
-    hover:shadow-[0_0_12px_rgba(74,222,128,0.8)]
-    cursor-pointer
-    select-none
-  "
-  whileHover={{ scale: 1.05 }}
->
-  <div className="flex items-center gap-3 mb-2">
-    <div className="text-2xl text-green-400">{icon}</div>
-    <h4 className="text-lg font-semibold">{title}</h4>
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+
+export function Example() {
+  return (
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      // ...
+    </Carousel>
+  )
+}
+export default function About() {
+  
+  const array = [
+    { src: "SIH.jpg", alt: "Smart India Hackathon" },
+    { src: "Electrothon7.0.jpg", alt: "Electrothon 7.0" },
+    { src: "group.jpg", alt: "group" },
+    { src: "newImage.jpg", alt: "group" }
+    
+  ];
+  return (
+    <div className="about">
+      <div className="text-section text-[15px] card">
+        <p>
+          My Name is Sakhil Sharma. Student at NIT Hamirpur, currently pursuing my
+          <i><b> BTech</b></i> degree in Electronics and Communication Engineering.
+          Ever since I've been fascinated by technology and its endless possibilities,
+          I loved to design and craft websites.
+          From crafting elegant user interfaces <i><b>(UI)</b></i> to diving deep into
+          backend systems <i><b>(node.js,express.js,mongoDB)</b></i>,
+          every aspect of web development fuels my passion for creating digital experiences
+          that leave a lasting impact.
+          I'm always on the lookout for exciting opportunities to collaborate, learn, and grow.
+          Whether you're interested in discussing a project,
+          exploring potential partnerships, or simply sharing ideas.
+        </p>
+
+        <div className="achievements-section">
+          <h3>Key Achievement</h3>
+          <div className="achievement-card">
+
+
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full"
+              defaultValue=""
+            >
+              <AccordionItem value="item-1">
+                <AccordionTrigger><h2 className="text-white text-xl font-semibold mb-2">
+                  Smart India Hackathon 2024 - College Level Selection
+                </h2></AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-4 text-balance">
+                  <div className="space-y-2 text-[15px] text-white">
+                    <p>
+                      Selected for <span className="italic font-medium text-green-400 text-[15px]">Smart India Hackathon 2023</span> as part of a{" "}
+                      <span className="italic font-medium text-green-400 text-[15px]">6-member team</span>.
+                    </p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Team collaboration</span> skills in a competitive environment</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Problem-solving</span> approach to address real-world challenges</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Communication and presentation</span> skills during project pitching</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Technical expertise</span> in developing prototype solutions</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Working under pressure</span> and meeting strict deadlines</p>
+                  </div>
+
+
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger><h2 className="text-white text-xl font-semibold mb-2">Electrothon 7.0 - National Hackathon (NIT Hamirpur)</h2></AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-4 text-balance">
+                  <div className="space-y-2 text-[15px] text-white">
+                    <p>
+                      Participated in <span className="italic font-medium text-green-400 text-[15px]">Electrothon 7.0</span> organized by{" "}
+                      <span className="italic font-medium text-green-400 text-[15px]">NIT Hamirpur</span>.
+                    </p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Full Stack web solution</span> built and presented under time constraints</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">API integration</span> for real-time data features</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Responsive UI design</span> with intuitive user flow</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Team collaboration</span> on planning, coding, and pitching</p>
+                    <p className="text-[15px] text-white">• <span className="italic text-green-400">Quick adaptability</span> to evolving project requirements</p>
+                  </div>
+
+
+                </AccordionContent>
+              </AccordionItem>
+
+            </Accordion>
+
+
+          </div>
+        </div>
+
+      </div>
+      <div className="info flex flex-col md:flex-row gap-8 items-center justify-center p-6">
+  {/* Video Section */}
+  <div className="media-card card max-w-md">
+    <video width="400" height="225" controls loop className="rounded-lg shadow-lg w-full h-auto">
+      <source src="vedio1.mp4" type="video/mp4" />
+    </video>
   </div>
-  <div className="achievement-details text-gray-300 text-sm">
-    <p className="mb-2 flex items-center gap-2 text-green-300 font-medium">
-      <FaCalendarAlt /> {date}
-    </p>
-    <p className="mb-3">{highlights}</p>
-    <ul className="list-disc ml-5 space-y-1">
-      {points.map((point, index) => (
-        <li key={index}>{point}</li>
-      ))}
-    </ul>
+
+  {/* Carousel Section */}
+  <div className="w-full max-w-[280px]">
+    <Carousel className="w-full"  plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}>
+      <CarouselContent>
+        {array.map((item, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-3">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover rounded-lg shadow-md"
+                  />
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   </div>
-</motion.div>
+</div>
 
-);
-export default function About({ title, icon, date, highlights, points }) {
-    return (
-        <div className="about">
-            <div className="text-section card">
-                <p>
-                    My Name is Sakhil Sharma. Student at NIT Hamirpur, currently pursuing my 
-                    <i><b> BTech</b></i> degree in Electronics and Communication Engineering.
-                    Ever since I've been fascinated by technology and its endless possibilities,
-                    I loved to design and craft websites.
-                    From crafting elegant user interfaces <i><b>(UI)</b></i> to diving deep into
-                    backend systems <i><b>(node.js,express.js,mongoDB)</b></i>,
-                    every aspect of web development fuels my passion for creating digital experiences
-                    that leave a lasting impact.
-                    I'm always on the lookout for exciting opportunities to collaborate, learn, and grow.
-                    Whether you're interested in discussing a project,
-                    exploring potential partnerships, or simply sharing ideas.
-                </p>
-                
-                                 <div className="achievements-section">
-                    <h3>Key Achievement</h3>
-                    <div className="achievement-card">
 
-  <div className="grid gap-6 md:grid-cols-2 mt-8 ">
-          <AchievementCard
-          title="Smart India Hackathon 2024 - College Level Selection"
-          icon={<FaMedal  style={{ color: "#4ade80" , marginTop:"15px" }}/>}
-          date="March 2024"
-          highlights={
-            <>
-              Selected for <span className="font-semibold text-green-400">Smart India Hackathon 2023</span> as part of a{" "}
-              <span className="font-semibold text-green-400">6-member team</span>.
-            </>
-          }
-          points={[
-            "Strong team collaboration skills in a competitive environment",
-            "Innovative problem-solving approach to address real-world challenges",
-            "Effective communication and presentation skills during project pitching",
-            "Technical expertise in developing prototype solutions",
-            "Ability to work under pressure and meet strict deadlines",
-          ]}
-        />
+    </div>
 
-        <AchievementCard
-          title="Electrothon 7.0 - National Hackathon (NIT Hamirpur)"
-          icon={<FaLightbulb style={{ color: "#4ade80" }} />}
-          date="April 2025"
-          highlights={
-            <>
-              Participated in <span className="font-semibold text-green-400">Electrothon 7.0</span> organized by{" "}
-              <span className="font-semibold text-green-400">NIT Hamirpur</span>.
-            </>
-          }
-          points={[
-            "Built and presented a full-stack web solution under time constraints",
-            "Integrated APIs for real-time data features",
-            "Designed a responsive UI with intuitive user flow",
-            "Collaborated on planning, coding, and pitching",
-            "Adapted quickly to evolving project requirements",
-          ]}
-        />
-        </div>
-        </div>
-        </div>
-            </div>
-            <div className="info">
-                <div className="media-card card">
-                    <video width="600" height="360" controls loop >
-                        <source src="vedio1.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                <div className="media-card card full-length">
-                    <img src="SIH.jpg" alt="profile" />
-                </div>
-                <div className="media-card card ">
-                    <img src="Electrothon &.0.jpg" alt="profile" />
-                </div>
-            </div>
-        </div>
-        
-    )
+  )
 }

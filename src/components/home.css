@@ -7,8 +7,11 @@
     position: relative;
     min-height: calc(100vh - 80px);
     width: 100%;
+     
+  z-index: 5;
+  background-color: transparent;
+     
 }
-
 #tsparticles {
     position: fixed;
     width: 100%;
@@ -16,6 +19,15 @@
     top: 0;
     left: 0;
     z-index: 1;
+}
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10; /* Must be higher than other backgrounds */
+  pointer-events: none; /* So you can still click UI elements */
 }
 
 .home-container {

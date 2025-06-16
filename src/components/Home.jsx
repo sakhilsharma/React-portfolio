@@ -2,45 +2,40 @@ import { useEffect, useState, useCallback } from 'react';
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import './home.css';
-
+import VantaRings from './rings'
+import { Button } from "@/components/ui/button"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 export default function Home() {
-  const [loading, setLoading] = useState(true);
- useEffect(() => {
-        const typed = new Typed('.animate', {
-            strings: ['Web Developer', "MERN Stack Developer", "Electronics Student"],
-            typeSpeed: 100,
-            backSpeed: 50,
-            loop: true
-        });
-
-        return () => {
-            typed.destroy();
-        };
-    }, []);
+ 
+  useEffect(() => {
+    const typed = new Typed('.animate', {
+      strings: ['Web Developer', "MERN Stack Developer", "Electronics Student"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+  
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   const particlesInit = useCallback(async engine => {
     await loadSlim(engine);
   }, []);
-
-  useEffect(() => {
-    // Simulate loading for demo (replace with your actual load logic)
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // 2 seconds loader
-
-    return () => clearTimeout(timer);
-  }, []);
+  
+  
 
   return (
     <>
-      {loading && <div className="loader">
-    <div className="loader-text">
-      Hi! Welcome <br/>
-      Happiness All The Time
-    </div>
-  </div>}
 
-      <div className="home-wrapper" style={{ filter: loading ? "blur(5px)" : "none", pointerEvents: loading ? "none" : "auto" }}>
-        <Particles
+
+ <VantaRings id="vanta-bg" />
+      <div className="home-wrapper" >
+       <Particles
           id="tsparticles"
           init={particlesInit}
           options={{
@@ -90,15 +85,24 @@ export default function Home() {
             <h2>SAKHIL SHARMA</h2>
             <p>I'm A <span className="animate"></span></p>
             <div className="resume-section">
-              <a 
-                href="https://drive.google.com/file/d/14nXsjLPxy8TBhC1jn__342NvdK4ZGv9R/view?usp=sharing" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="resume-button"
-              >
-                <i className="fas fa-file-pdf"></i>  Resume
-              </a>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://drive.google.com/file/d/14nXsjLPxy8TBhC1jn__342NvdK4ZGv9R/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-blue-600 text-white hover:bg-blue-700 p-1 rounded-md" style={{ padding: "1rem" }}>
+                      <i class="fas fa-file-pdf"></i> RESUME
+                    </Button>
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Updated June 2025</p>
+                </TooltipContent>
+              </Tooltip>
             </div>
+
           </div>
         </div>
       </div>

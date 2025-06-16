@@ -7,7 +7,7 @@ const Experience = () => {
         {
             title: "Front-End Intern",
             company: "Cognifyz Technologies",
-            duration: "13 December,2024 - ongoing",
+            duration: "13 December,2024 - 24 Jan 2025",
             description: [
                 "Built responsive websites using HTML, CSS, and JavaScript",
                 "Working with APIs and handled data integration",

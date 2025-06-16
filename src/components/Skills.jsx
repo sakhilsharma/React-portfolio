@@ -151,36 +151,7 @@ export default function Skills() {
 
             </div>
 
-            <div className="interview-section">
-                <h2>Interview Preparation Resources</h2>
-                <div className="interview-grid">
-                    <div className="interview-card">
-                        <h3>HTML & CSS</h3>
-                        <ul>
-                           
-                            <li><a href="https://www.interviewbit.com/html-interview-questions/" target="_blank" rel="noopener noreferrer">HTML Questions</a></li>
-                        </ul>
-                    </div>
-
-
-
-                    <div className="interview-card">
-                        <h3>JavaScript</h3>
-                        <ul>
-                            <li><a href="https://github.com/sudheerj/javascript-interview-questions" target="_blank" rel="noopener noreferrer">JavaScript Guide</a></li>
-                            <li><a href="https://www.interviewbit.com/javascript-interview-questions/" target="_blank" rel="noopener noreferrer">JS Questions</a></li>
-                        </ul>
-                    </div>
-
-                    <div className="interview-card">
-                        <h3>ReactJS</h3>
-                        <ul>
-                            <li><a href="https://github.com/sudheerj/reactjs-interview-questions" target="_blank" rel="noopener noreferrer">React Interview Guide</a></li>
-                            <li><a href="https://www.interviewbit.com/react-interview-questions/" target="_blank" rel="noopener noreferrer">React Questions</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     )
 }
