@@ -1,6 +1,8 @@
 import "./About.css";
 import { FaMedal, FaLightbulb, FaCode, FaUsers, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import VantaHalo from './halo';
+
 import {
   Accordion,
   AccordionContent,
@@ -31,7 +33,7 @@ export function Example() {
   )
 }
 export default function About() {
-  
+   
   const array = [
     { src: "SIH.jpg", alt: "Smart India Hackathon" },
     { src: "Electrothon7.0.jpg", alt: "Electrothon 7.0" },
@@ -40,8 +42,10 @@ export default function About() {
     
   ];
   return (
-    <div className="about">
+    <div className="about relative z-10">
+      <VantaHalo id="#vanta-bg"/>
       <div className="text-section text-[15px] card">
+         
         <p>
           My Name is Sakhil Sharma. Student at NIT Hamirpur, currently pursuing my
           <i><b> BTech</b></i> degree in Electronics and Communication Engineering.

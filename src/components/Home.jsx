@@ -10,7 +10,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 export default function Home() {
- 
+
   useEffect(() => {
     const typed = new Typed('.animate', {
       strings: ['Web Developer', "MERN Stack Developer", "Electronics Student"],
@@ -18,7 +18,7 @@ export default function Home() {
       backSpeed: 50,
       loop: true
     });
-  
+
     return () => {
       typed.destroy();
     };
@@ -26,16 +26,26 @@ export default function Home() {
   const particlesInit = useCallback(async engine => {
     await loadSlim(engine);
   }, []);
-  
-  
+  useEffect(() => {
+    //we need to manually add the oiverriding transparency to homepage
+    //so that the aniomation bg can be applied
+    const root = document.getElementById('root');
+    const original = root.style.backgroundColor;
+    root.style.backgroundColor = 'transparent';
+
+    return () => {
+      root.style.backgroundColor = original;
+    };
+  }, []);
+
 
   return (
     <>
 
 
- <VantaRings id="vanta-bg" />
+      <VantaRings id="vanta-bg" />
       <div className="home-wrapper" >
-       <Particles
+        <Particles
           id="tsparticles"
           init={particlesInit}
           options={{
@@ -88,7 +98,7 @@ export default function Home() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
-                    href="https://drive.google.com/file/d/14nXsjLPxy8TBhC1jn__342NvdK4ZGv9R/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1gaVE02QUz25VrN6pjJFt-Aba_hy1W05F/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

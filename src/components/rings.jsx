@@ -23,7 +23,7 @@ const VantaRings = () => {
     };
   }, [vantaEffect]);
 
-  return <div ref={vantaRef} className="w-full h-screen absolute top-0 left-0 -z-10" />;
+  return <div ref={vantaRef} className="w-full h-screen absolute top-0 left-0 -z-100" />;
 };
 
 export default VantaRings;
